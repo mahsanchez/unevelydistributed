@@ -1,0 +1,104 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.mahsanchez.coherence</groupId>
+	<artifactId>coherence-framework</artifactId>
+	<version>2.1.5</version>
+	<name>coherence-framework</name>
+
+	<properties>
+		<!-- source encoding definition -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
+		<!-- dependency versions (alphabetically) -->
+		<oracle.coherence.version>12.1.2</oracle.coherence.version>
+		<oracle.coherence.incubator.version>12.2.1</oracle.coherence.incubator.version>
+		<oracle.coherence.littlegrid.version>2.15.2</oracle.coherence.littlegrid.version>
+		<oracle.jdbc.version>11.2.0.3.0</oracle.jdbc.version>
+		<oracle.ucp.version>11.2.0.4.0</oracle.ucp.version>
+		<org.slf4j.version>1.7.5</org.slf4j.version>
+		<org.mvel.version>2.2.4.Final</org.mvel.version>
+		<org.junit.version>4.11</org.junit.version>
+		<org.javassist.version>3.4.GA</org.javassist.version>
+		<org.h2database.version>1.4.185</org.h2database.version>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.16</version>
+				<configuration>
+					<forkCount>1</forkCount>
+					<reuseForks>false</reuseForks>
+					<argLine>-Xms1024m -Xmx1024m -Xmn256m -XX:PermSize=256m</argLine>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.oracle.coherence</groupId>
+			<artifactId>coherence</artifactId>
+			<version>${oracle.coherence.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.oracle.coherence.incubator</groupId>
+			<artifactId>coherence-incubator-all</artifactId>
+			<version>${oracle.coherence.incubator.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.littlegrid</groupId>
+			<artifactId>littlegrid</artifactId>
+			<version>${oracle.coherence.littlegrid.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>de.danielbechler</groupId>
+			<artifactId>java-object-diff</artifactId>
+			<version>0.91.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>${org.h2database.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>${oracle.jdbc.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.oracle.ucp</groupId>
+			<artifactId>oracle-ucp</artifactId>
+			<version>${oracle.ucp.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.7</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${org.junit.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>${org.javassist.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mvel</groupId>
+			<artifactId>mvel2</artifactId>
+			<version>${org.mvel.version}</version>
+		</dependency>
+	</dependencies>
+</project>
+
