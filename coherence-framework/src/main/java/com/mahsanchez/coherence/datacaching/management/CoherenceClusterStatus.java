@@ -97,7 +97,7 @@ public class CoherenceClusterStatus {
              log( String.format("Using default timeOut value %d", DEFAULT_TIMEOUT) );
          }
          // Retrieve Distributed Services StatusHA
-         final CoherenceClusterStatus clusterStatusClient = new CoherenceClusterStatus();
+         CoherenceClusterStatus clusterStatusClient = new CoherenceClusterStatus();
          try {
              Map<String, String> servicesStatusHAMap = clusterStatusClient.getServicesStatusHA(timeOut);
              for (Map.Entry<String, String> entry : servicesStatusHAMap.entrySet()) {
@@ -107,6 +107,8 @@ public class CoherenceClusterStatus {
          catch(Exception exception) {
              log( String.format("Error retrieving the Coherence Distributed Cache Services active in the Cluster Cause: %s", exception.getStackTrace() ) );
          }
+
+         System.exit(0);
      }
 
      
