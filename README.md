@@ -1,2 +1,15 @@
 # unevelydistributed
 Oracle Coherence Utilities, Configuration and Solution Patterns
+
+# Implementing a Distributed/Aggregated BloomFilter using Oracle Coherence
+-Eliminate the need of using NamedCache.containsKey, instead store locally an snapshot BitMap representation of
+what is stored on the storages nodes. 
+Purpose: Exploring the idea of Continuos Aggregation and prevent a massive access from a Computing Grid
+
+# Implementing Historic VAR simulation using Oracle Coherence (Typical Memory Bound Problem)
+- Storing TimeSerie Data in Cassandra or an Oracle Database
+- Massive TimeSerie Data Bulkloading
+- Partial TimeSerie Data loading (Typical use case of On Demand TimeSerie Data loading or prevention of PartitionLost)
+- In time series data such as this is to introduce a grouping of time periods into the cluster key (Key Association)
+
+# Apache Spark and Oracle Coherence Integration
