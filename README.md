@@ -11,5 +11,6 @@ Purpose: Exploring the idea of Continuos Aggregation and prevent a massive acces
 - Massive TimeSerie Data Bulkloading
 - Partial TimeSerie Data loading (Typical use case of On Demand TimeSerie Data loading or prevention of PartitionLost)
 - In time series data such as this is to introduce a grouping of time periods into the cluster key (Key Association)
+- Create a Portfolio using Bonds or Equities and run a Historic VAR Simulation with confidence interval of 99%, 500 days of TimeHorizon
 
 # Apache Spark and Oracle Coherence Integration
