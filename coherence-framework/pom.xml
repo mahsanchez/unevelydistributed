@@ -19,7 +19,7 @@
 		<oracle.ucp.version>11.2.0.4.0</oracle.ucp.version>
 		<org.slf4j.version>1.7.5</org.slf4j.version>
 		<org.mvel.version>2.2.4.Final</org.mvel.version>
-		<org.junit.version>4.11</org.junit.version>
+		<org.junit.version>4.13.1</org.junit.version>
 		<org.javassist.version>3.4.GA</org.javassist.version>
 		<org.h2database.version>1.4.185</org.h2database.version>
 	</properties>
